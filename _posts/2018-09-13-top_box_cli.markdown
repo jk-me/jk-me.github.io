@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Top Box CLI"
-date:       2018-09-13 20:24:29 +0000
+date:       2018-09-13 16:24:30 -0400
 permalink:  top_box_cli
 ---
 
@@ -11,15 +11,15 @@ After reviewing the webpage, I decided on including a summary and a few critic r
 
 The webpage I started scraping from was the imdb.com list of top box office movies. The list linked to the information pages for each individual movie, which then linked to a page of sampled critic reviews for each movie. 
 
-![](https://pasteboard.co/HDJQ1wQ.png)
+![](http://pasteboard.co/HDJQ1wQ.png)
 
 I created a CLI that would display a list of movies, then prompt the user to select a number from the list to see more details about that movie.
 
-![](https://pasteboard.co/HDJPpfy.png)
+![](http://pasteboard.co/HDJPpfy.png)
 
 It would then display a short summary of the movie and ask is the user would like to see a selection of reviews. The application would then loop through the command menus so the user could view details about different movies and find one that interested them. 
 
-![](https://pasteboard.co/HDJPIAA.png)
+![](http://pasteboard.co/HDJPIAA.png)
 
 I used a class to create movie instances which would store attributes for each movie.  Data scraped from the first webpage was then passed to these objects using an attribute hash. Each movie would then scrape data from their indivudual information page for additional attributes.  
 
