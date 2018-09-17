@@ -23,7 +23,7 @@ It would then display a short summary of the movie and ask if the user would lik
 
 I used a class to create movie instances which would store attributes for each movie.  Data scraped from the first webpage was then passed to these objects using an attribute hash. Each movie would then scrape data from their indivudual information page for additional attributes.  
 
-I also created a class for reviews, such that each review instance would store a summary of the review, the review score, the publisher and the author (if applicable) of the review. These objects were created similarly to the previous example, by scraping the data and passing it to each object through an attribute hash. The review instances were then initiliazed so that they belonged to the movie which they described.  
+I also created a class for reviews, such that each review instance would store a summary of the review, the review score, the publisher and the author (if applicable). These objects were created similarly to the previous example, by scraping the data and passing it to each object through an attribute hash. The review instances were then initiliazed so that they belonged to the movie which they described.  
 
 After creating the data structure for these objects and scraping the webpages for information, the last step was to finalize the CLI and format the outputted text to be simple to read and interact with. 
 
