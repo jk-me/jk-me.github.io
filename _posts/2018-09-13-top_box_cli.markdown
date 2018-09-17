@@ -5,7 +5,7 @@ date:       2018-09-13 16:24:30 -0400
 permalink:  top_box_cli
 ---
 
-For my project I decided to create an application that displays information about current top box office movies. I started by thinking about what information the user would be interested in. What did I look for when I wanted to see go to the movies? 
+For my project I decided to create an application that displays information about current top box office movies. I started by thinking about what information the user would be interested in. What did I look for when I wanted to go to the movies? 
 
 After reviewing the webpage, I decided on including a summary and a few critic reviews for each movie, along with additional details such as movie length and number of weeks in theaters. 
 
