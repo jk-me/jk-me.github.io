@@ -15,15 +15,15 @@ I created models for users, drinks, ingredients, and reviews. For the model asso
 * have many reviews
 * have many (favorited) drinks through a users_drinks join table 
 
-	Drinks would:
+ Drinks would:
 * have many reviews
 * have many users through the users_drinks join table
 * have many ingredients through a drinks_ingredients table
 
-Ingredients would: 
+ Ingredients would: 
 * have many drinks through the drinks_ingredients table 
 
-	Reviews would:
+ Reviews would:
 * belong to a user 
 * belong to a drink
 
