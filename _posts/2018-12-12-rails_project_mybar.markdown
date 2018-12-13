@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Project: MyBar"
-date:       2018-12-13 00:43:08 +0000
+date:       2018-12-12 19:43:09 -0500
 permalink:  rails_project_mybar
 ---
 
@@ -11,8 +11,10 @@ For my rails project, I decided to create an app to manage an index of bar drink
 I created models for users, drinks, ingredients, and reviews. For the model associations,
 
 	Users would:
-* 		have many reviews
-* 		have many (favorited) drinks through a users_drinks join table 
+* have many reviews
+* have many (favorited) drinks through a users_drinks join table 
+
+
 	Drinks would:
 * have many reviews
 * have many users through the users_drinks join table
