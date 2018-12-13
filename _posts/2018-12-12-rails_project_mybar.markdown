@@ -10,16 +10,19 @@ For my rails project, I decided to create an app to manage an index of bar drink
 
 I created models for users, drinks, ingredients, and reviews. For the model associations,
 
-	Users would:
-1. have many reviews
-2. have many (favorited) drinks through a users_drinks join table 
+ Users would:
+	
+* have many reviews
+* have many (favorited) drinks through a users_drinks join table 
 
 	Drinks would:
-1. have many reviews
-2. have many users through the users_drinks join table
-3. have many ingredients through a drinks_ingredients table
+* have many reviews
+* have many users through the users_drinks join table
+* have many ingredients through a drinks_ingredients table
+
 Ingredients would: 
 * have many drinks through the drinks_ingredients table 
+
 	Reviews would:
 * 		belong to a user 
 * 		belong to a drink
