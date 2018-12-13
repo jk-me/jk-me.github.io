@@ -24,8 +24,8 @@ Ingredients would:
 * have many drinks through the drinks_ingredients table 
 
 	Reviews would:
-* 		belong to a user 
-* 		belong to a drink
+* belong to a user 
+* belong to a drink
 
 I used bcrypt to for user authentication, in addition to omniauth to allow login through facebook. I also added a simple bootstrap layout using this guide on Github: https://github.com/twbs/bootstrap-sass
 
