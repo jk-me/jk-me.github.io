@@ -11,9 +11,8 @@ For my rails project, I decided to create an app to manage an index of bar drink
 I created models for users, drinks, ingredients, and reviews. For the model associations,
 
 	Users would:
-* have many reviews
-* have many (favorited) drinks through a users_drinks join table 
-
+1. have many reviews
+2. have many (favorited) drinks through a users_drinks join table 
 
 	Drinks would:
 * have many reviews
