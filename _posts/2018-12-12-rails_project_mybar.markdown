@@ -27,6 +27,6 @@ I created models for users, drinks, ingredients, and reviews. For the model asso
 * belong to a user 
 * belong to a drink
 
-I used bcrypt to for user authentication, in addition to omniauth to allow login through facebook. I also added a simple bootstrap layout using this guide on Github: https://github.com/twbs/bootstrap-sass
+I used bcrypt to for user authentication, in addition to omniauth to allow login through facebook. I also added a simple bootstrap layout using this guide on [Github](https://github.com/twbs/bootstrap-sass)
 
 One of the biggest difficulties I had during this project was just generally feeling overwhelmed by dealing with so many files and and having to add many specific features to complete it. Adding validations and scope methods to models, error checking controller methods, working to consistently use partial layouts, forms and helper methods to simplify code while trying to make sure they were not being used redundantly was definitely a challenge.
