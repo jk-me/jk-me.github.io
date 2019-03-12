@@ -12,4 +12,5 @@ I recreated the card game Deuces, also known as Big Two, or Chinese Poker. Playe
 
 I used the create-react-app to build the front-end of my site, and a rails API to store game data of win/loss records. I also used the [Deck of Cards API](http://deckofcardsapi.com/) to fetch and shuffle decks of cards, and to draw hands. In addition, I used foreman to serve my React and Rails servers simultaneously from one directory.
 
-![]https://ibb.co/3RHvM25)
+![](https://i.ibb.co/6X581zc/Screen-Shot-2019-03-11-at-7-22-31-PM.png)
+
