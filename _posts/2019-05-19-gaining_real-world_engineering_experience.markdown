@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Gaining Real-World Engineering Experience"
-date:       2019-05-20 03:38:58 +0000
+title:      "Gaining Real World Engineering Experience"
+date:       2019-05-19 23:38:59 -0400
 permalink:  gaining_real-world_engineering_experience
 ---
 
