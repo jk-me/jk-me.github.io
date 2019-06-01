@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Creating an npm package"
-date:       2019-06-01 02:56:29 +0000
+date:       2019-05-31 22:56:30 -0400
 permalink:  creating_an_npm_package
 ---
 
 
-I wrote a blog post recently on how creating developer tools can be beneficial for understanding how to write programs that have users. This post is my experience attempting to create an npm package for practice and to understand its underlying principles.
+I wrote a blog post recently on how creating developer tools can be beneficial in understanding how to write programs that have real users. This post is my experience attempting to create an npm package for practice and to understand its underlying principles.
 
-I followed this [freecodecamp](https://www.freecodecamp.org/news/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78/) blog post on how to create and publish a very tiny npm package. I will include an abbreviated version of the steps listed in this post. 
+I followed this [freecodecamp](https://www.freecodecamp.org/news/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78/) blog post on how to create and publish a very tiny npm package. I will include an abbreviated version of the steps listed in this post, along with some additional explanations I found helpful.
 
 Basically an npm module only requires a package.json file with name and version properties to be published.
 
@@ -36,7 +36,7 @@ Prefacing the name of the package with your username, will create a scoped packa
 
 In package names, scopes are preceded by an @ and followed by a / (for example, @angular/core). The module is required or installed in the same format `npm install @angular/core`
 
-Npm follows SemVer conventions, which has a basic form of 0.0.0, each number referring to major.minor.patch versions. Major refers to a backwards incompatible version change. Minor and patch versions are backwards compatible, where minor adds functionality and patch fixes bugs. There are also other additional versioning conventions in SemVer. 
+Npm follows SemVer (semantic versioning) conventions, which has a basic form of 0.0.0, each number referring to major.minor.patch versions. Major refers to a backwards incompatible version change. Minor and patch versions are backwards compatible, where minor adds functionality and patch fixes bugs. There are also other additional versioning conventions in SemVer. 
 
 You can also add `"description"` (string) and `"keywords"` (array of strings) attributes to your package.json. This will help users discover your module through `npm search`
 
@@ -70,10 +70,13 @@ module.exports = function tiny(string) {
   return string.replace(/\s/g, "");
 };
 ```
+This code error checks so that the function argument is a valid string, then uses regular expressions to remove spaces. In Javascript regex, `/\s/` refers to whitespace characters, and `g` refers to global/all matches. [W3Schools JS Regex ref](https://www.w3schools.com/js/js_regexp.asp)
+
+`module.exports` is an object that contains functions. In this case it is a function, which is also a JS object. 
 
 Publish your package using this command in terminal
 
-`npm publish --access=public`
+```npm publish --access=public```
 
 For initial creation, npm will attempt to publish modules privately when using the `npm publish` command only, so you must specify that a package will be public. Publishing private modules requires a subscription on npmjs.
 
