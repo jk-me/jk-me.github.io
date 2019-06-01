@@ -84,7 +84,7 @@ npm publish --access=public
 
 For initial creation, npm will attempt to publish modules privately when using the `npm publish` command only, so you must specify that a package will be public. Publishing private modules requires a paid subscription on npmjs.
 
-When successful your terminal output should show a plus sign with your package name and version. You will also receive an email from your npmjs account.
+When successful your terminal output should show a plus sign with your package name and version. You will also receive an email from npmjs.
 
 You can signal a major version update with `npm version major` in terminal.
 Follow with `npm publish` to publish to the same public module.
