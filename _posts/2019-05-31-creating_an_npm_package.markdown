@@ -74,7 +74,7 @@ This code error checks so that the function argument is a valid string, then use
 
 `module.exports` is an object that contains functions. In this case it is a function, which is also a JS object. 
 
-Publish your package using this command in terminal
+Publish your package using this command in terminal:
 
 ```npm publish --access=public```
 
