@@ -76,7 +76,9 @@ This code error checks so that the function argument is a valid string, then use
 
 Publish your package using this command in terminal:
 
-```npm publish --access=public```
+```
+npm publish --access=public
+```
 
 For initial creation, npm will attempt to publish modules privately when using the `npm publish` command only, so you must specify that a package will be public. Publishing private modules requires a subscription on npmjs.
 
