@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Module.exports in node.js (+ testing your npm package!)"
-date:       2019-06-11 15:25:46 +0000
+date:       2019-06-11 11:25:47 -0400
 permalink:  module_exports_in_node_js_testing_your_npm_package
 ---
 
@@ -9,7 +9,7 @@ In a previous blog post, I discussed the process of creating and publishing an n
 
 **To use your npm package: (testing w/ node.js)**
 
-Install it in your project with `npm i @jk-me/practicenpm`. You can do this a new project file to test your code. 
+Install it in your project with `npm i @jk-me/practicenpm`. You can do this in a new project folder to test your code. 
 
 Create a js file (ex. `index.js`) in the root directory of project. Import the package and set it to a variable of your choice. ```const pie = require(‘@jk-me/practicenpm’)```
 
@@ -18,12 +18,12 @@ Write code in index.js that uses the functions in the package and `console.log` 
 ```
 const pie = require(‘@jk-me/practicenpm’)         //loads module, w exports.tiny fn 
 console.log( pie.tiny("a string with spaces") )      //uses exported fn from required module
-=> 'astringwithspaces'                                                 //logged output in terminal
+=> 'astringwithspaces'                                    //logged output in terminal
 ``` 
 
 You can also use node (javascript) cli with `node` command, and `.exit` to exit
 
-After installing your package in your test project file, it will appear inside it in the `node_modules` directory. You can modify your code in here to test it using the above method before actually updating your module and publishing a new version to npm. Of course this is only for testing purposes and you normally wouldn't modify packages after installing them.
+After installing your package in your test project folder, it will appear inside it in the `node_modules` directory. You can modify your code in here to test it using the above method before actually updating your module and publishing a new version to npm. Of course this is only for testing purposes and you normally wouldn't modify packages after installing them.
 
 **module.exports**
 
@@ -44,7 +44,7 @@ module.exports = {
 
 `exports` is a shortcut for `module.exports` However, assigning a value to `exports` itself no longer binds it to module.exports and it will not be exported, so you should also assign that value to `module.exports`.
 
-Variables local to module file are private. Attributes Node.js wraps in a function called module wrapper before executing
+Variables local to module files are private. Node.js wraps the module in a function called module wrapper before executing a require statement.
 
 There are 3 types of modules: core, local and third-party. Core modules are included in node.js. They must still be imported (ex. `require(‘http’)`), Some examples include `’http’`, `’path’`, and `’querystring’`, used to set up Node.js http servers, deal with file paths, and deal with query strings, respectively.
 
