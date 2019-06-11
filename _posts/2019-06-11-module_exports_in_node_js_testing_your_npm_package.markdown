@@ -11,13 +11,15 @@ In a previous blog post, I discussed the process of creating and publishing an n
 
 Install it in your project with `npm i @jk-me/practicenpm`. You can do this in a new project folder to test your code. 
 
-Create a js file (ex. `index.js`) in the root directory of project. Import the package and set it to a variable of your choice. ```const pie = require(‘@jk-me/practicenpm’)```
+Create a js file (ex. `index.js`) in the root directory of project. 
+
+Import the package into the file and set it to a variable of your choice. ```const pie = require(‘@jk-me/practicenpm’)```
 
 Write code in index.js that uses the functions in the package and `console.log` the output. In terminal run `node index.js`to execute script and see output in the terminal.
 
 ```
-const pie = require(‘@jk-me/practicenpm’)         //loads module, w exports.tiny fn 
-console.log( pie.tiny("a string with spaces") )      //uses exported fn from required module
+const pie = require(‘@jk-me/practicenpm’)         //loads module, w exports.tiny function 
+console.log( pie.tiny("a string with spaces") )      //uses exported function from required module
 => 'astringwithspaces'                                    //logged output in terminal
 ``` 
 
