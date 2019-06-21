@@ -36,14 +36,14 @@ Ex. 13 to binary
 
 To convert a number from binary to decimal:
 * For each bit bi (0 or 1), sum (bi x 2^i) 
-* start from least significant (last) bit  as i=0
+* Start from least significant (last) bit  as i=0
 
 Ex. 1101 to decimal
 ```
 i=0 ->   b0=1, 2^0=1   ->   1*1 = 1
 i=1 ->   b1=0, 2^1=2    ->   0*2 = 0
 i=2 ->   b2=1, 2^2=4    ->   1*4 = 4
-i=3 ->   b3=1, 2^3=8    ->   1*8 = 5
+i=3 ->   b3=1, 2^3=8    ->   1*8 = 8
 
 Sum terms -> 1 + 0 + 4 + 8 = 13 
 1101(base2) = 13 (base10)
