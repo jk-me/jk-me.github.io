@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Binary Conversion and Bitwise Operators"
-date:       2019-06-21 04:48:10 +0000
+date:       2019-06-21 00:48:11 -0400
 permalink:  binary_conversion_and_bitwise_operators
 ---
 
@@ -28,18 +28,19 @@ To convert a number from decimal to binary:
 Ex. 13 to binary
 ```
 13 / 2 = 6 remainder 1 (first, least significant)
--> 6 / 2 = 3 remainder 0 
--> 3/2= 1 remainder 1 
--> 1/2= 0 remainder 1 (last, most significant)
+ -> 6 / 2 = 3 remainder 0 
+   -> 3/2= 1 remainder 1 
+      -> 1/2= 0 remainder 1 (last, most significant)
 13 (base10) = 1101 (base2)
 ```
 
 To convert a number from binary to decimal:
-* For each symbol/bit bi (0 or 1), sum (bi x 2i) -> start from least significant (last bit) as i=0
-* Example 1101 to decimal
+* For each bit bi (0 or 1), sum (bi x 2^i) 
+* start from least significant (last) bit  as i=0
 
 ```
-i=0 ->   b0=1, 2^0 =1   ->   1*1 = 1
+1101 to decimal
+i=0 ->   b0=1, 2^0=1   ->   1*1 = 1
 i=1 ->   b1=0, 2^1=2    ->   0*2 = 0
 i=2 ->   b2=1, 2^2=4    ->   1*4 = 4
 i=3 ->   b3=1, 2^3=8    ->   1*8 = 5
