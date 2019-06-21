@@ -56,6 +56,6 @@ All pairs result in 0, except 1 and 1 -> `101 & 100` = 100
 * Bitwise or ( `| `)
 All pairs result in 1, except 0 and 0 -> `0101 | 0110` = 0111
 * Bitwise xor (`^`)
-Pairs that are different result in 1. 0 with 0 and 1 with 1 result in 0 -> 0101 ^ 0110 = 0011
+Pairs that are different result in 1. 0 with 0 and 1 with 1 result in 0 -> `0101 ^ 0110` = 0011
 * Bitwise not (`~`)
-Inverts value -> ~101 = 010
+Inverts value ->` ~101` = 010
