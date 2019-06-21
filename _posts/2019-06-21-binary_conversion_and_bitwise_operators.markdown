@@ -27,10 +27,10 @@ To convert a number from decimal to binary:
 
 Ex. 13 to binary
 ```
-13 / 2 = 6 remainder 1 (first, least significant)
- -> 6 / 2 = 3 remainder 0 
-   -> 3/2= 1 remainder 1 
-      -> 1/2= 0 remainder 1 (last, most significant)
+13/2 = 6 remainder 1 (first, least significant)
+ -> 6/2 = 3 remainder 0 
+   -> 3/2 = 1 remainder 1 
+      -> 1/2 = 0 remainder 1 (last, most significant)
 13 (base10) = 1101 (base2)
 ```
 
@@ -38,8 +38,8 @@ To convert a number from binary to decimal:
 * For each bit bi (0 or 1), sum (bi x 2^i) 
 * start from least significant (last) bit  as i=0
 
+Ex. 1101 to decimal
 ```
-1101 to decimal
 i=0 ->   b0=1, 2^0=1   ->   1*1 = 1
 i=1 ->   b1=0, 2^1=2    ->   0*2 = 0
 i=2 ->   b2=1, 2^2=4    ->   1*4 = 4
