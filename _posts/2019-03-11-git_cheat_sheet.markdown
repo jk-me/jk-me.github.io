@@ -20,7 +20,7 @@ The basic method of updating a repository is add, commit, then push to the remot
 * `git commit --amend -m ‘updated commit msg’` - changes commit message of last commit
 
 **Connecting remote repo**
-To initialize a new git repo, should use `git init` to initialize a repo locally, then create, add and commit some files. Then create a repo in your GitHub account, and follow the instructions to connect the remote to your local repo.
+To initialize a new git repo, should use `git init` to initialize a repo locally, then create, add and commit some files. Then create a new empty repository in your GitHub account, and follow the instructions to connect the remote to your local repo. Alternatively, you can create a new remote repo, then clone it down to your local environment before beginning your project in that directory.
 * `git init` - create local repository, then create, add and commit some initial files
 * `git remote add origin (…link…)` - connects remote repo, check quick setup in online repo
 * `git push -u origin master` - pushes first commit to remote repo
