@@ -6,39 +6,45 @@ permalink:  git_cheat_sheet
 ---
 
 
-A cheat sheet I compiled on remembering how to create your own git repositories.
+A cheat sheet I compiled on creating and working with your own git repositories.
 
-It was especially useful to have this when it was time to start coding projects. Most of the labs don't require you to initilialize your own repos, or branch or commit them.
+It was especially useful to have this when it was time to start coding projects. Most of the labs don't require you to initialize your own repos, or branch or commit them.
 
-* git status  //see changes to be added, to be committed
+* `git status`  //see changes to be added, to be committed
 
-* $git add .   //prepares all changed files to be committed 
-* $git commit -m ‘message’  //commits files to repo with a commit message
-                              //messages should be in this tense, this commit will “add function x”
-* $git push             //pushes to remote
-* $git push -u origin master 
- 
-* $git commit --amend -m ‘updated commit msg’ //changes commit message of last commit
+The basic method of updating a repository is add, commit, then push to the remote (stored on Git) repository.
 
-Connecting remote repo
-* $git init  //create local repository
-                     //create, add and commit some initial files 
-                    //create a new repo in GitHub acc, readme not req if exists
-* $git remote add origin (…link…)  //connects remote repo, check quick setup in online repo
-* $git push -u origin master 
+* `git add .` - Prepares all changed files to be committed.
+* `git commit -m ‘message’` - Commits added files to repo with a commit message. Messages should be in this tense, this commit will "...message". For example 'update readme', as the the commit will update the readme when implemented in the project.
+* `git push` - pushes all commits to remote
+* `git push -u origin master` -  same as git push, but specifies pushing to the master branch  
 
-Branches
-* $git checkout -b branch-name           //creates new branch ‘branch-name’
-* $git branch             //view branches
-* $git add .               //prepare for commit
-* $git commit -m ‘message’                //commit 
-* $git push -u origin branch-name.               //pushes commits to branch
-* $git push --set-upstream origin branch-name   //pushes commit to branch 
+* `git commit --amend -m ‘updated commit msg’` - changes commit message of last commit
 
-* $git branch -d branch-name   //deletes local branch
+**Connecting remote repo**
+To initialize a new git repo, should use `git init` to initialize a repo locally, then create, add and commit some files. Then create a repo in your GitHub account, and follow the instructions to connect the remote to your local repo.
+* `git init` - create local repository, then create, add and commit some initial files
+* `git remote add origin (…link…)` - connects remote repo, check quick setup in online repo
+* `git push -u origin master` - pushes first commit to remote repo
+
+**Branches**
+Branches are used to separate code, for example to work on a new feature that you may not want to immediately have on the master version of your project.
+* `git branch` - view branches
+* `git checkout branch-name` - switches branches where future commits will be added
+* `git checkout -b branch-name` - creates new branch ‘branch-name’ and switches to have work committed to this branch
+
+After adding and committing files (be sure to be on correct branch), use one of the following to push to your branch. After this first push to a branch, `git push` should automatically go to that branch as well.
+* `git push -u origin branch-name.` - pushes commits to branch
+* `git push --set-upstream origin branch-name` - pushes commit to branch, same as above command
 
 Push branch to master
-* $git checkout master //switch branches(back to origin)
-* $git merge branch-name //merges branch 
+When your branch feature is finished, you can merge with your master branch with the following.
+* `git checkout master` - switch branches(back to master)
+* `git merge branch-name` - merges branch
+Then git add, commit and push as usual.
 
-git add >> commit >> push
+* `git branch -d branch-name` - deletes local branch
+
+To clone down a branch of a remote repo
+* `git clone -b branch-name ssh-link`
+* `git clone -b branch-name ssh-link --single-branch` Add this flag to prevent fetching all branches in git 1.7.10+
