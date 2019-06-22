@@ -10,15 +10,13 @@ A cheat sheet I compiled on creating and working with your own git repositories.
 
 It was especially useful to have this when it was time to start coding projects. Most of the labs don't require you to initialize your own repos, or branch or commit them.
 
-* `git status`  //see changes to be added, to be committed
-
 The basic method of updating a repository is add, commit, then push to the remote (stored on Git) repository.
 
+* `git status` - see changes to be added, to be committed
 * `git add .` - Prepares all changed files to be committed.
 * `git commit -m ‘message’` - Commits added files to repo with a commit message. Messages should be in this tense, this commit will "...message". For example 'update readme', as the the commit will update the readme when implemented in the project.
 * `git push` - pushes all commits to remote
-* `git push -u origin master` -  same as git push, but specifies pushing to the master branch  
-
+* `git push -u origin master` - same as git push, but specifies pushing to the master branch
 * `git commit --amend -m ‘updated commit msg’` - changes commit message of last commit
 
 **Connecting remote repo**
@@ -37,10 +35,10 @@ After adding and committing files (be sure to be on correct branch), use one of 
 * `git push -u origin branch-name.` - pushes commits to branch
 * `git push --set-upstream origin branch-name` - pushes commit to branch, same as above command
 
-Push branch to master
-When your branch feature is finished, you can merge with your master branch with the following.
+When your branch feature is finished, you can merge and push to your master branch with the following.
 * `git checkout master` - switch branches(back to master)
-* `git merge branch-name` - merges branch
+* `git merge branch-name` - merges branch.
+
 Then git add, commit and push as usual.
 
 * `git branch -d branch-name` - deletes local branch
