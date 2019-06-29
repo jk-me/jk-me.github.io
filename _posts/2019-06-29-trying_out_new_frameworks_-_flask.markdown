@@ -52,12 +52,12 @@ The routes file then changes to include `from flask import render_template` and 
 Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses marker tags to wrap keywords for control statements, very similarly to using erb tags in Ruby.
 ```
 Flask:
-{% ... %}    //logic keywords
-{{...}}    //display value
+{% %}    //logic keywords
+{{ }}    //display value
 
  Ruby:
- <%...%>     //logic keywords
- <%= …. %>   //display value
+ <% %>     //logic keywords
+ <%= %>   //display value
 ```
 
 Python syntax uses `if … elif … else` and `for .. in …` keywords and Flask also requires the `endif` and `endfor` keywords to mark the end of the statement.
