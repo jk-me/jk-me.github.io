@@ -13,12 +13,12 @@ I had learned Python a few years ago in college and wanted to refresh my knowled
 
 I followed Miguel Grinberg's Flask Mega Tutorial [link](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world ), which explains each step in much better detail and what tools you are using / what the purpose of each step is, but I will go over the steps to provide a brief overview of how a Flask app is created/structured and how it is different/similar to Sinatra and Ruby on Rails.
 
-You will: 
+You will:
 * Install python3 if you don’t have it -> `brew install python3`
 * Create a `venv` virtual environment to separate your project’s dependencies from your operating system and other projects `python -m venv myvenv`
-* Activate your virtual environment `source myproject/bin/myvenv`  (Deactivate with `deactivate` in terminal) 
+* Activate your virtual environment `source myproject/bin/myvenv`  (Deactivate with `deactivate` in terminal)
 * *Be sure to have your venv activated when installing packages, or it will also be added to your entire system*
-* Install Flask using pip, python’s package installer 
+* Install Flask using pip, python’s package installer
 * Copy the code and file structure outlined to create a simple ‘hello world’ python server
 
 Currently homebrew includes pip3, which runs with `pip3` alias instead of just pip - so you would need to run `pip3 install Flask`. You may need to run `brew postinstall python3` to install pip
@@ -30,7 +30,7 @@ Install `pip3 install python-dotenv` , then in the `.flaskenv` file in root, add
 
 Flask doesn’t have preset ORM (Object Relational Mapper, or database manager) like Rails ActiveRecord. SQLAlchemy is a python library ORM often used with Flask. It can be used with SQLite, postgreSQL, MySQL and other database engines. Another combination commonly used is MongoEngine or MongoKit with MongoDB.
 
-So far, the routes and the view layout is both located in the `app/routes.py` file. To separate concerns, make templates in app/templates, for example `app/templates/index.html` This will be structured like a regular html file, but with inserted variables written with double brackets, for ex `{{user.username}}`. 
+So far, the routes and the view layout is both located in the `app/routes.py` file. To separate concerns, make templates in app/templates, for example `app/templates/index.html` This will be structured like a regular html file, but with inserted variables written with double brackets, for ex `{{user.username}}`.
 
 ```
 #in my-app-name/app/routes.py
@@ -48,9 +48,8 @@ def index():
 
 The routes file then changes to include `from flask import render_template` and to render the template. The user in the function is a temporary data object to view in the server since there is no database yet.
 
-Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses `{% … %}` blocks to wrap keywords for control statements, very similarly to using erb tags in Ruby (reminder that`{%...%}` and  ‘{{...}}’ used in flask, `<%...%>` and `<%= …. %>` used in Rails/Sinatra)
+Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses `{% … %}` blocks to wrap keywords for control statements, very similarly to using erb tags in Ruby (reminder that `{%...%}` and  `{{...}}` used in flask, `<%...%>` and `<%= …. %>` used in Rails/Sinatra)
 
 Python syntax uses `if … elif … else` and `for .. in …` keywords and Flask also requires the `endif` and `endfor` keywords to mark the end of the statement.
 
 Templates can also be inherited in Flask, like as in other frameworks, such as for a navigation bar. For a `base.html` file also in the templates directory. `{% block UniqueName%} {% endblock%}` signals where another template can be inserted. This block statement must also wrap around the content in the derived template file, with the same unique name as in the extended template. `extends base.html` is included at the top of the file to inherit the template.
-
