@@ -7,7 +7,7 @@ permalink:  trying_out_new_frameworks_-_flask
 
 I wanted to try out some other web frameworks in different languages to see how they worked and if I would have a preference for one. The first new one I tried was Python Flask.
 
-I had learned Python a few years ago in college and wanted to refresh my knowledge of the language, and learning a popular web deveopment framework like Flask seemed like a good way to do so. Flask, compared to Django, is much simpler, without many preset packages and add-ons. It allows you to choose what you need.
+I had learned Python a few years ago in college and wanted to refresh my knowledge of the language, and learning a popular web deveopment framework like Flask seemed like a good way to do so. Flask, compared to Django, is much simpler, without many preset packages and add-ons. It allows you to choose what you need, and avoid unnecessary package bloat for smaller projects.
 
 **Flask Setup**
 
