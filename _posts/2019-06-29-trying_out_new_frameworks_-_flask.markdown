@@ -24,7 +24,9 @@ You will:
 
 Currently homebrew includes pip3, which runs with `pip3` alias instead of just pip - so you would need to run `pip3 install Flask`. You may need to run `brew postinstall python3` to install pip
 
-Using the file structure outlined in Grinberg’s tutorial, to start your server set the flask environment variable `export FLASK_APP=myapp.py` After setting the environment variable you can run `flask run` and navigate to `localhost:5000` You will need to reload the development server each time you make changes, like in Sinatra.
+Using the file structure outlined in Grinberg’s tutorial, to start your server set the flask environment variable `export FLASK_APP=myapp.py` After setting the environment variable you can run `flask run` and navigate to `localhost:5000`
+
+You will need to reload the development server each time you make changes, like in Sinatra.
 
 Will have to set flask env var for each new terminal session unless you use an environment variable
 Install `pip3 install python-dotenv` , then in the `.flaskenv` file in root, add the variable as `FLASK_APP=my-app-name.py`
@@ -50,16 +52,20 @@ def index():
 The routes file then changes to include `from flask import render_template` and to render the template. The user in the function is a temporary data object to view in the server since there is no database yet.
 
 Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses marker tags to wrap keywords for control statements, very similarly to using erb tags in Ruby.
+{% raw %}
 ```
 Flask:
-{% %}    //logic keywords
-{{ }}    //display value
+{% ... %}    //logic keywords
+{{ ... }}    //display value
 
  Ruby:
- <% %>     //logic keywords
- <%= %>   //display value
+ <% ... %>     //logic keywords
+ <%= ... %>   //display value
 ```
+{% endraw %}
 
 Python syntax uses `if … elif … else` and `for .. in …` keywords and Flask also requires the `endif` and `endfor` keywords to mark the end of the statement.
 
-Templates can also be inherited in Flask, like as in other frameworks, such as for a navigation bar. For a `base.html` file also in the templates directory. `{% block UniqueName%} {% endblock%}` signals where another template can be inserted. This block statement must also wrap around the content in the derived template file, with the same unique name as in the extended template. `extends base.html` is included at the top of the file to inherit the template.
+Templates can also be inherited in Flask, like as in other frameworks, such as for a navigation bar. For a `base.html` file also in the templates directory. {%raw%}`{% block UniqueName%} {% endblock%}`{%endraw%} signals where another template can be inserted.
+
+This block statement must also wrap around the content in the derived template file, with the same unique name as in the extended template. `extends base.html` is included at the top of the file to inherit the template.
