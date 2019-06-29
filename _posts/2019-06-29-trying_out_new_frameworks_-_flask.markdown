@@ -5,7 +5,6 @@ date:       2019-06-29 05:12:41 +0000
 permalink:  trying_out_new_frameworks_-_flask
 ---
 
-
 I wanted to try out some other web frameworks in different languages to see how they worked and if I would have a preference for one. The first new one I tried was Python Flask.
 
 I had learned Python a few years ago in college and wanted to refresh my knowledge of the language, and learning a popular web deveopment framework like Flask seemed like a good way to do so. Flask, compared to Django, is much simpler, without many preset packages and add-ons. It allows you to choose what you need.
@@ -50,7 +49,7 @@ def index():
 
 The routes file then changes to include `from flask import render_template` and to render the template. The user in the function is a temporary data object to view in the server since there is no database yet.
 
-Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses {% … %} blocks to wrap keywords for control statements, very similarly to using erb tags in Ruby.
+Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses marker tags to wrap keywords for control statements, very similarly to using erb tags in Ruby.
 ```
 Flask:
 {% … %}    //logic keywords
