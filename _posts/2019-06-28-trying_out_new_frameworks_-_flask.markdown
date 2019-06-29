@@ -48,7 +48,16 @@ def index():
 
 The routes file then changes to include `from flask import render_template` and to render the template. The user in the function is a temporary data object to view in the server since there is no database yet.
 
-Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses ` {% … %} ` blocks to wrap keywords for control statements, very similarly to using erb tags in Ruby (reminder that`{%...%}` and  `{{...}}` used in flask, `<%...%>` and `<%= …. %>` used in Rails/Sinatra)
+Control logic can also be used in the html templates. Flask uses the Jinja2 template engine to render, and it uses {% … %} blocks to wrap keywords for control statements, very similarly to using erb tags in Ruby.
+```
+Flask:
+{% … %}    //logic keywords
+ {{...}}          //display value
+ 
+ Ruby: 
+ <%...%>     //logic keywords
+ <%= …. %>        //display value
+```
 
 Python syntax uses `if … elif … else` and `for .. in …` keywords and Flask also requires the `endif` and `endfor` keywords to mark the end of the statement.
 
