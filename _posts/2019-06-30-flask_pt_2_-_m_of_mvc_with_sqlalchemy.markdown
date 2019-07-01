@@ -6,11 +6,13 @@ permalink:  flask_pt_2_-_m_of_mvc_with_sqlalchemy
 ---
 
 
-Of course it’s probably a good idea to read and work through a tutorial in order, as the creator intended, but I didn’t do that. 
+Of course it’s probably a good idea to read and work through a tutorial in order, as the creator intended, but I didn’t do that.
 
-Continuing with my Flask app form my last post, when I create a new project I usually have an idea of models I will be using and set up the database immediately after creating the app. So to satisfy my curiosity, I skipped reading most of part 3 of the tutorial covering configuration keys and forms using flask-wtf. (`pip3 install flask-wtf`) 
+Continuing with my Flask app form my last post, when I create a new project I usually have an idea of models I will be using and set up the database immediately after creating the app. So to satisfy my curiosity, I skipped reading most of part 3 of the tutorial covering configuration keys and forms using flask-wtf. (`pip3 install flask-wtf`)
 
-I wanted to go over database set up, which is covered in [part 4](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database). Then in consideration of an MVC framework, after this section I will have learned basic views and models. Basic controller actions are actually covered in part 3 of the tutorial as handling form submissions. 
+I wanted to go over database set up, which is covered in [part 4](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database). Then in consideration of an MVC framework, after this section I will have learned basic views and models. Basic controller actions are actually covered in part 3 of the tutorial as handling form submissions.
+
+As I mentioned in my previous post, Flask doesn't have a preset ORM or database, so you must choose and install your own.
 
 * `pip3 install flask-sqlalchemy` - an ORM (like Ruby ActiveRecord) used with flask, supports sql, postgres, mysql, etc.
 * `pip3 install flask-migrate` - an extension that is a flask wrapper for Alembic, sqlalchemy’s db migration framework.
@@ -38,7 +40,7 @@ Migrations are handled with a migration repository, similarly to ActiveRecord mi
 
 Run `flask db init` to create migration repo structure in your project.
 
-Flask can automatically generate migrations by comparing the models defined in `app/models.py` to the actual database schema using `flask db migrate -m ‘users-table’` The `-m` flag is for a migration description. 
+Flask can automatically generate migrations by comparing the models defined in `app/models.py` to the actual database schema using `flask db migrate -m ‘users-table’` The `-m` flag is for a migration description.
 
 SQLAlchemy uses snake case naming convention for its tables. So for a table may be named, `address_and_phone_number`. The `__tablename__` attribute in a model class can be used to customize the name.
 
@@ -46,9 +48,9 @@ The generated migration (in `migrations/versions/`) has upgrade() and downgrade(
 
 Use `flask db downgrade` to remove the last migration.
 
-After setting up the database, there are some ways to interact with your app’s database in the terminal.
+**After setting up the database, below are some ways to interact with your app’s database in the terminal.**
 
-Access and change the database using `db.session` . Query models using the class methods in `User.query` The full [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) docs show all the command options
+After opening python3 in your terminal and importing your app (be in right directory) you can create instances of the models you defined and access and change the database using `db.session` . You can also query models using the class methods in a `User.query` like structure. The full [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) docs show all the command options
 
 ```
 python3
@@ -57,9 +59,10 @@ from app.models import User, Post
 u = User(username='john', email='john@example.com')
 db.session.add(u)
 db.session.commit()
+User.query.all()
 ```
 
-You can also run `flask shell` in the terminal to open an interpreter in the context of the application. It pre-imports the app so you can interact with it, and you can configure it in `my-app-name.py` to have the database models available as well.
+You can also just run `flask shell` in the terminal to open an interpreter in the context of the application. It pre-imports the app so you can interact with it, and you can configure it in `my-app-name.py` to have the database models available as well.
 
 ```
 from app import app, db
@@ -71,4 +74,3 @@ def make_shell_context():
 ```
 
 [Link](https://github.com/jk-me/pytodo) to my github repo for this project. (Check out earlier commits to see the process described above.)
-

@@ -15,8 +15,8 @@ I followed Miguel Grinberg's Flask Mega Tutorial [link](https://blog.miguelgrinb
 
 You will:
 * Install python3 if you don’t have it -> `brew install python3`
-* Create a `venv` virtual environment to separate your project’s dependencies from your operating system and other projects `python -m venv myvenv`
-* Activate your virtual environment `source venv/bin/activate`  (Deactivate with `deactivate` in terminal)
+* Create a `venv` virtual environment to separate your project’s dependencies from your operating system and other projects `python -m venv myvenv` *You can name the file anything, including just venv*
+* Activate your virtual environment `source myvenv/bin/activate`  (Deactivate with `deactivate` in terminal)
 * *Be sure to have your venv activated when installing packages, or it will also be added to your entire system*
 * Install Flask using pip, python’s package installer
 * Copy the code and file structure outlined to create a simple ‘hello world’ python server
