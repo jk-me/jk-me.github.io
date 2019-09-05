@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Python Web Scraping"
-date:       2019-09-05 20:20:00 +0000
+date:       2019-09-05 16:20:01 -0400
 permalink:  python_web_scraping
 ---
 
