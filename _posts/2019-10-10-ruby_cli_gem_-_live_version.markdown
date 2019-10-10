@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Ruby Cli Gem - Live Version"
-date:       2019-10-10 04:04:22 +0000
+date:       2019-10-10 00:04:22 -0400
 permalink:  ruby_cli_gem_-_live_version
 ---
 
@@ -9,15 +9,16 @@ permalink:  ruby_cli_gem_-_live_version
 Most of the projects completed through Flatiron’s Full Stack course are web applications using Sinatra or Rails which can be hosted on sites like heroku or netlify. To show a live version of the Ruby CLI project, I decided to publish my app as a gem and then demonstrate its use with a repl.it project. 
 
 Gems are published through rubygems.org
+
 Repl.it is a site for building projects using many different frameworks and languages through an online IDE
 
-[My Repl](https://repl.it/@jkam17/top-box-office-cli-gem)
-[RubyGems docs](https://guides.rubygems.org/make-your-own-gem/)
+* [My Repl](https://repl.it/@jkam17/top-box-office-cli-gem)
+* [RubyGems docs](https://guides.rubygems.org/make-your-own-gem/)
 
 Helpful commands for gem building/publishing:
-$`gem list`  //check what gems are installed
-$`gem build app_name.gemspec`  //builds gem (app_name-0.1.0.gem)
-$`gem push app_name-0.1.0.gem` //publish gem, will need a rubygems.org account
+* $`gem list`  //check what gems are installed
+* $`gem build app_name.gemspec`  //builds gem (app_name-0.1.0.gem)
+* $`gem push app_name-0.1.0.gem` //publish gem, will need a rubygems.org account
 
 After creating your project, create a `app-name.gemspec` file and add the required specifications.
 [Gemspec Reference](https://guides.rubygems.org/specification-reference/)
