@@ -1,13 +1,13 @@
 ---
 layout: post
 title:      "Using Rails Credentials"
-date:       2019-11-06 00:48:30 +0000
+date:       2019-11-05 19:48:31 -0500
 permalink:  using_rails_credentials
 ---
 
 
 
-A guide on using the Rails built in encrypted credentials storing system, instead of using the dotenv gem and a .env file.
+An overview of using the Rails built in encrypted credentials storing system, instead of dotenv gem and a .env file.
 
 (Needs rails 5.2+)
 
